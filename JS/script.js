@@ -30,3 +30,25 @@ function convertirHSL_A_HEX(hsl) {
 
   return `#${aHex(r)}${aHex(g)}${aHex(b)}`;
 }
+
+const contenedorPaleta = document.getElementById("contenedorPaleta");
+const botonGenerar = document.getElementById("botonGenerar");
+const tamanoPaleta = document.getElementById("tamanoPaleta");
+
+function generarPaleta() {
+  contenedorPaleta.innerHTML = "";
+  const cantidad = parseInt(tamanoPaleta.value);
+
+  for (let i = 0; i < cantidad; i++) {
+    const hsl = generarColorHSL();
+    const hex = convertirHSL_A_HEX(hsl);
+
+    const tarjeta = document.createElement("div");
+    tarjeta.textContent = `${hsl} | ${hex}`;
+    tarjeta.style.background = hsl;
+
+    contenedorPaleta.appendChild(tarjeta);
+  }
+}
+
+botonGenerar.addEventListener("click", generarPaleta);
