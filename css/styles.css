@@ -1,0 +1,21 @@
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+.aplicacion {
+  min-height: 100vh;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.panel-controles {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
