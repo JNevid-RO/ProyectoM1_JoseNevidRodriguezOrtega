@@ -19,3 +19,17 @@ body {
   flex-wrap: wrap;
   margin: 2rem 0;
 }
+
+#contenedorPaleta {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+#contenedorPaleta div {
+  padding: 1rem;
+  border-radius: 12px;
+  min-height: 120px;
+  display: flex;
+  align-items: flex-end;
+}
