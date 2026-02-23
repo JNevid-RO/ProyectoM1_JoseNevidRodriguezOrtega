@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Paletas</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <main class="aplicacion">
+    
+    <header class="encabezado">
+      <h1>Generador de Paletas</h1>
+      <p>Colores en formato HSL y HEX</p>
+    </header>
+
+    <section class="panel-controles">
+      <label for="tamanoPaleta">Tamaño de la paleta</label>
+      <select id="tamanoPaleta">
+        <option value="6">6</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+
+      <button id="botonGenerar">Generar paleta</button>
+    </section>
+
+    <section id="contenedorPaleta" aria-live="polite"></section>
+
+  </main>
+
+  <script src="./JS/script.js"></script>
+</body>
+</html>
