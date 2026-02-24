@@ -11,13 +11,18 @@
   <main class="aplicacion">
     
     <header class="encabezado">
-      <h1>Generador de Paletas</h1>
-      <p>Colores en formato HSL y HEX</p>
+      <h1>Generador de Paletas de Colores</h1>
+      <h2>Los colores son generados aleatoriamente en formato HSL o HEX</h2>
+      <p>Clickear la checkbox para seleccionar formato</p>
+      <label class="interruptor-formato">
+      <input type="checkbox" id="interruptorFormato">
+      </label> 
     </header>
 
     <section class="panel-controles">
       <label for="tamanoPaleta">Tamaño de la paleta</label>
       <select id="tamanoPaleta">
+        <option value="" disabled selected> Selecciona una opción...</option>
         <option value="6">6</option>
         <option value="8">8</option>
         <option value="9">9</option>
