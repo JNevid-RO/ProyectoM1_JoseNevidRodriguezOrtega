@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
 
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
-  background: #0f172a;
+  background: linear-gradient(to bottom,#212256,#16163e,#423f6a);
   color: white;
 }
 
@@ -11,6 +13,35 @@ body {
   padding: 2rem;
   max-width: 1200px;
   margin: auto;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Rubik Doodle Shadow", system-ui;
+  font-weight: normal;
+  font-size: 3.5rem;
+  padding: auto;
+}
+h2 {
+  text-align: center;
+  font-family: "Bad Script", cursive;
+  font-size: 2rem;
+  padding: auto;
+}
+p, #interruptorFormato {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 1rem;
+}
+
+p {
+  margin-right: 20px;
+}
+
+label {
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 .panel-controles {
@@ -23,7 +54,7 @@ body {
 #contenedorPaleta {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 #contenedorPaleta div {
