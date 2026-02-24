@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
 
@@ -17,8 +16,8 @@ body {
 
 h1 {
   text-align: center;
-  font-family: "Rubik Doodle Shadow", system-ui;
-  font-weight: normal;
+  font-family: "Bad Script", cursive;
+  font-weight: bold;
   font-size: 3.5rem;
   padding: auto;
 }
@@ -60,7 +59,75 @@ label {
 #contenedorPaleta div {
   padding: 1rem;
   border-radius: 12px;
+  border: 5px solid rgba(0, 0, 0, 0.25);
   min-height: 120px;
   display: flex;
   align-items: flex-end;
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+/* Animaciones: aparecer y desaparecer */
+#contenedorPaleta div.mostrar {
+  animation: aparecer 420ms cubic-bezier(.2,.9,.2,1) forwards;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+#contenedorPaleta div.ocultar {
+  animation: desaparecer 320ms ease forwards;
+}
+
+@keyframes desaparecer {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(8px); }
+}
+
+/* Botón generar (estilo simplificado) */
+#botonGenerar {
+  padding: 0.5rem 0.9rem;
+  background: #ff6b6b;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  transition: background 150ms ease, transform 120ms ease, box-shadow 120ms ease;
+}
+#botonGenerar:hover { background: #ff5a5a; transform: translateY(-1px); box-shadow: 0 4px 10px rgba(0,0,0,0.14); }
+#botonGenerar:active { transform: translateY(0); }
+
+/* Checkbox: mejorada la apariencia nativa (no es toggle) */
+.interruptor-formato {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-family: "Montserrat Alternates", sans-serif;
+  color: #fff;
+  font-size: 1rem;
+}
+
+#interruptorFormato {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: #06b6d4;
+  transform: scale(1.2);
+  transition: box-shadow 140ms ease, transform 120ms ease;
+  cursor: pointer;
+}
+
+#interruptorFormato:focus {
+  box-shadow: 0 0 0 4px rgba(6,182,212,0.16);
+  border-radius: 4px;
+}
+
+#interruptorFormato:hover {
+  transform: scale(1.12);
 }
